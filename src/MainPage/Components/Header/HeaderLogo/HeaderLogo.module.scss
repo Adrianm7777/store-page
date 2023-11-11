@@ -1,0 +1,17 @@
+.logo {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  width: 65px;
+  height: 50px;
+  &:hover {
+    opacity: 0.6;
+  }
+  img {
+    width: 65px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,64 @@
+.navBarWrapper {
+  top: 75px;
+
+  p {
+    font-size: 1.45833vw;
+    font-weight: 700;
+  }
+}
+
+.socialMediaOverlay {
+  display: none;
+}
+
+.cutLogo {
+  img {
+    position: absolute;
+    right: 0;
+    bottom: 76px;
+    height: 51vh;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .socialMediaOverlay {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    img {
+      height: 1.5625vw;
+    }
+  }
+
+  .cutLogo {
+    img {
+      height: 34vh;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navBarWrapper {
+    .navBarItem {
+      justify-content: flex-start !important;
+    }
+
+    p {
+      font-size: 5.09259vw;
+    }
+  }
+
+  .socialMediaOverlay {
+    display: flex !important;
+    img {
+      height: 1.5625vw;
+    }
+  }
+
+  .cutLogo {
+    img {
+      height: 28vh;
+    }
+  }
+}
