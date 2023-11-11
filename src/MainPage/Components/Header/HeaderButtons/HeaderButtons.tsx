@@ -26,7 +26,8 @@ const HeaderButtons = ({ isNavOpen }: HeaderButtonsProps) => {
     <div className={styles.buttonsHeader}>
       {!(isNavOpen && windowWidth <= 1200) && (
         <>
-          <SocialMedia isHidden={true} /> <DeliveryButton />
+          <SocialMedia isHidden={true} />
+          <DeliveryButton />
         </>
       )}
     </div>

@@ -1,4 +1,4 @@
-import SocialMediaLinks from "./SocialMediaLinks";
+import SocialMediaLinks from "./SocialMediaLinks.consts";
 import styles from "./SocialMedia.module.scss";
 
 interface SocialMediaProps {

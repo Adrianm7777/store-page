@@ -1,7 +1,6 @@
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import HeaderSearch from "./HamburgerMenu/HeaderSearch/HeaderSearch";
 import OverlayMenu from "./HamburgerMenu/OverlayMenu/OverlayMenu";
-import styles from "./Header.module.scss";
 import HeaderButtons from "./HeaderButtons/HeaderButtons";
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import { useState } from "react";

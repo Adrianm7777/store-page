@@ -1,8 +1,8 @@
 import styles from "./HeaderLogo.module.scss";
 
 interface HeaderLogoProps {
-  href?: string;
-  src?: string;
+  href: string;
+  src: string;
 }
 
 const HeaderLogo = ({ href, src }: HeaderLogoProps) => {
