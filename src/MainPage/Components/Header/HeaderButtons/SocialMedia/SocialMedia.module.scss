@@ -1,0 +1,11 @@
+.socialMediaButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 766px) {
+  .hidden {
+    display: none;
+  }
+}
