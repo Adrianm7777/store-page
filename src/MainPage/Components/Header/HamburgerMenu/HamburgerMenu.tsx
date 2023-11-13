@@ -5,14 +5,12 @@ interface HamburgerMenuProps {
   hamburgerImg: string;
 }
 
-const HamburgerMenu = ({ showToggle, hamburgerImg }: HamburgerMenuProps) => {
-  return (
-    <div className={styles.hamburgerContainer}>
-      <div className={styles.hamburgerIcon} onClick={showToggle}>
-        <img src={hamburgerImg} />
-      </div>
+const HamburgerMenu = ({ showToggle, hamburgerImg }: HamburgerMenuProps) => (
+  <div className={styles.hamburgerContainer}>
+    <div className={styles.hamburgerIcon} onClick={showToggle}>
+      <img src={hamburgerImg} />
     </div>
-  );
-};
+  </div>
+);
 
 export default HamburgerMenu;

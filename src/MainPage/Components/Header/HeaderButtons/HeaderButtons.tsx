@@ -4,7 +4,7 @@ import styles from "./HeaderButtons.module.scss";
 import SocialMedia from "./SocialMedia/SocialMedia";
 
 interface HeaderButtonsProps {
-  isNavOpen?: boolean;
+  isNavOpen: boolean;
 }
 
 const HeaderButtons = ({ isNavOpen }: HeaderButtonsProps) => {
