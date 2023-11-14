@@ -3,19 +3,41 @@ import HeaderSearch from "./HamburgerMenu/HeaderSearch/HeaderSearch";
 import OverlayMenu from "./HamburgerMenu/OverlayMenu/OverlayMenu";
 import HeaderButtons from "./HeaderButtons/HeaderButtons";
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navbar, Container } from "react-bootstrap";
+import styles from "./Header.module.scss";
 
 const Header = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.pageYOffset;
+      setIsScrolled(offset > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isScrolled]);
+
   const showNav = () => setIsNavExpanded((prevState) => !prevState);
 
   return (
-    <Navbar fixed="top" expand="lg">
+    <Navbar
+      fixed="top"
+      expand="lg"
+      className={
+        isScrolled ? `${styles.navBar} ${styles.headerScrolled}` : styles.navBar
+      }
+    >
       <Container
         fluid
-        className="d-flex justify-content-between align-items-center p-3"
+        className="d-flex justify-content-between align-items-center p-3 "
       >
         {isNavExpanded && <OverlayMenu />}
         <HamburgerMenu
