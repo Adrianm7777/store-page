@@ -1,5 +1,8 @@
+@import "./../../../../../Scss/Abstract/Colors";
+
 .navBarWrapper {
   top: 75px;
+  background-color: $pageBackground;
 
   p {
     font-size: 1.45833vw;

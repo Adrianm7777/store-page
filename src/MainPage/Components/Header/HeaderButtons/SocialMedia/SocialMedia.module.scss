@@ -2,6 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  a {
+    width: 65px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+    img {
+      height: 13px;
+      width: 13px;
+    }
+  }
 }
 
 @media screen and (max-width: 766px) {

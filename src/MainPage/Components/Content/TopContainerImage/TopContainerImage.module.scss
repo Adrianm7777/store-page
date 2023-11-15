@@ -1,0 +1,23 @@
+.topContainer {
+  height: 100vh;
+
+  .topButtonContainer {
+    top: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .topContainer {
+    a {
+      height: 1077px;
+    }
+    img {
+      content: url(https://cdn.mcdonalds.pl/uploads/20231107170648/burger-drwala-mobile.jpg);
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .checkButton {
+    display: none;
+  }
+}
