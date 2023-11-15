@@ -23,7 +23,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isScrolled]);
+  }, [window.pageYOffset]);
 
   const showNav = () => setIsNavExpanded((prevState) => !prevState);
 
@@ -35,7 +35,10 @@ const Header = () => {
         isScrolled ? `${styles.navBar} ${styles.headerScrolled}` : styles.navBar
       }
     >
-      <Container fluid className="d-flex justify-content-between align-items-center p-3 ">
+      <Container
+        fluid
+        className="d-flex justify-content-between align-items-center p-3 "
+      >
         {isNavExpanded && <OverlayMenu />}
         <HamburgerMenu
           showToggle={showNav}

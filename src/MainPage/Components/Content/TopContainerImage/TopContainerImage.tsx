@@ -13,7 +13,9 @@ const TopContainerImage = () => (
         />
       </a>
     </Row>
-    <div className="d-flex justify-content-center align-items-center position-relative top-5">
+    <div
+      className={`d-flex justify-content-center align-items-center position-relative ${styles.topButtonContainer}`}
+    >
       <Button btnHref="/burger-drwal" btnText="SPRAWDŹ" isbuttonHidden={true} />
     </div>
   </Container>
