@@ -1,21 +1,31 @@
 import styles from "./Button.module.scss";
+import Container from "react-bootstrap/Container";
 
-interface ButtonProps {
+interface ShowMoreButtonProps {
   btnText: string;
   btnHref: string;
   isbuttonHidden: boolean;
 }
-const Button = ({ btnText, btnHref, isbuttonHidden }: ButtonProps) => {
+const ShowMoreButton = ({
+  btnText,
+  btnHref,
+  isbuttonHidden,
+}: ShowMoreButtonProps) => {
   const changeClass = isbuttonHidden
     ? `${styles.buttonContainer} ${styles.buttonContainerHidden}`
     : styles.buttonContainer;
   return (
-    <div className={changeClass}>
-      <a href={btnHref}>
-        <p>{btnText}</p>
+    <Container
+      className={`d-flex justify-content-center align-items-center position-relative overflow-hidden p-0 ${changeClass}`}
+    >
+      <a
+        className="d-flex justify-content-center align-items-center w-100 h-100"
+        href={btnHref}
+      >
+        <p className="m-0">{btnText}</p>
       </a>
-    </div>
+    </Container>
   );
 };
 
-export default Button;
+export default ShowMoreButton;

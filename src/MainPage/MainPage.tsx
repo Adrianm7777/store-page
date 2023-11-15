@@ -1,12 +1,12 @@
 import Content from "./Components/Content/Content";
 import Header from "./Components/Header/Header";
-import styles from "./MainPage.module.scss";
+import Container from "react-bootstrap/Container";
 
 const MainPage = () => (
-  <div className={styles.mainPageContainer}>
+  <Container fluid className="h-100">
     <Header />
     <Content />
-  </div>
+  </Container>
 );
 
 export default MainPage;
