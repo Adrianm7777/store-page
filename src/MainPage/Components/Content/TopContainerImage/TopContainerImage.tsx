@@ -12,7 +12,7 @@ const TopContainerImage = () => (
     </a>
 
     <div
-      className={`d-flex justify-content-center align-items-center position-relative h-30 ${styles.topButtonContainer}`}
+      className={`d-flex justify-content-center align-items-center position-relative h-25 ${styles.topButtonContainer}`}
     >
       <Button btnHref="/burger-drwal" btnText="SPRAWDŹ" isbuttonHidden={true} />
     </div>
