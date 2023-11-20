@@ -1,4 +1,4 @@
-import styles from "./Button.module.scss";
+import styles from "./ShowMoreButton.module.scss";
 import Container from "react-bootstrap/Container";
 
 interface ShowMoreButtonProps {

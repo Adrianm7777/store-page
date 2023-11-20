@@ -1,0 +1,31 @@
+.whatsNewElement {
+  width: calc(50% - 2rem);
+  position: relative;
+
+  &::after {
+    content: url(https://cdn.mcdonalds.pl/public/build/images/circle-arrow-right.96e077a6.svg);
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+  }
+
+  .elementWrapper {
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+
+    img {
+      transition: 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .whatsNewElement {
+    width: 100%;
+  }
+}
