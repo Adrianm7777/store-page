@@ -1,0 +1,53 @@
+.mobileAppContainer {
+  background-image: url("https://cdn.mcdonalds.pl/public/build/images/modernChaseBg.bf224f9e.svg");
+}
+
+@media screen and (min-width: 1200px) {
+  .mobileAppContainer {
+    &::after {
+      height: 2.22222vw;
+      margin: -2.22222vw auto 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .appSection {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    .mobileAppContainer {
+      &::after {
+        height: 3.25521vw;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .appSection {
+    height: 180vh !important;
+  }
+
+  .mobileAppContainer {
+    align-items: center;
+    background-color: #ffbc0d;
+    flex-direction: column;
+    justify-content: center;
+    height: 90% !important;
+
+    .firstColumn {
+      order: 2;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .appSection {
+    .mobileAppContainer {
+      height: 70% !important;
+    }
+  }
+}

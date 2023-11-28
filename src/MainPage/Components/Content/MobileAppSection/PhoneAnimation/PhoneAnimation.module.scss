@@ -1,0 +1,11 @@
+.phoneImage {
+  right: -50px;
+  overflow: hidden;
+  transition: all 1.4s;
+  z-index: 5;
+  height: 110%;
+}
+
+.phoneHovered {
+  transform: translateX(-30px) translateY(5px);
+}

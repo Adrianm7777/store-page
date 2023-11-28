@@ -1,0 +1,109 @@
+@import "./../../../../../Scss/Abstract/Colors";
+
+.downloadAppContainer {
+  z-index: 5;
+
+  .qrHeaderContainer {
+    h2 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+  .qrContainer {
+    cursor: pointer;
+    position: relative;
+
+    .animationQr {
+      position: absolute;
+      z-index: 5;
+      height: 20px;
+      top: -20px;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        hsla(0, 0%, 100%, 0),
+        $deliveryBackground
+      );
+      transition: all 1.4s;
+    }
+
+    .hovered {
+      transform: translateY(60px);
+    }
+
+    img {
+      width: 49px;
+    }
+  }
+  .downloadAppText {
+    word-wrap: break-word;
+  }
+  .appsStoresContainer {
+    img {
+      width: 135px;
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .downloadAppContainer {
+    .qrHeaderContainer {
+      h2 {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .downloadAppContainer {
+    .qrHeaderContainer {
+      h2 {
+        font-size: 22px;
+      }
+    }
+    .appsStoresContainer {
+      img {
+        width: 120px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .downloadAppContainer {
+    width: 100%;
+
+    .qrHeaderContainer {
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        font-size: 6vw;
+      }
+      .qrContainer {
+        .hovered {
+          transform: translateY(160px);
+        }
+        img {
+          width: 160px;
+        }
+      }
+    }
+    .qrContainerText {
+      text-align: center;
+    }
+
+    .downloadAppText {
+      text-align: center;
+      p {
+        font-size: 3vw;
+      }
+    }
+  }
+  .appsStoresContainer {
+    margin-bottom: 30px;
+  }
+}
