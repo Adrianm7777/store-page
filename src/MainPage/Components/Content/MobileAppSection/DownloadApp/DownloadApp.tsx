@@ -9,13 +9,9 @@ interface MobileAppSectionProps {
 const DownloadApp = ({ isHover }: MobileAppSectionProps) => {
   const [modalOpen, setModalOpen] = useState(false);
 
-  const showModal = () => {
-    setModalOpen(true);
-  };
+  const showModal = () => setModalOpen(true);
 
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  const closeModal = () => setModalOpen(false);
 
   return (
     <div
@@ -27,7 +23,7 @@ const DownloadApp = ({ isHover }: MobileAppSectionProps) => {
         <div className={styles.qrContainer}>
           <div
             className={`${styles.animationQr} ${isHover ? styles.hovered : ""}`}
-          ></div>
+          />
           <img
             onClick={showModal}
             src="https://cdn.mcdonalds.pl/uploads/20230831110135/mcd-app-qr-png-icon.jpg"

@@ -22,9 +22,7 @@ const MobileAppSection = () => {
         >
           <DownloadApp isHover={isHover} />
         </Col>
-        <Col
-          className={`d-flex justify-content-center align-items-center p-0 ${styles.secondColumn}`}
-        >
+        <Col className="d-flex justify-content-center align-items-center p-0">
           <PhoneAnimation isHover={isHover} />
         </Col>
       </Row>
