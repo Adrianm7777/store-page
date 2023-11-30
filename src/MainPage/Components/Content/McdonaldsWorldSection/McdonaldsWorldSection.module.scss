@@ -1,0 +1,70 @@
+@import "./../../../../Scss/Abstract/Colors";
+
+.mcdonaldsWorldSectionHeader {
+  position: relative;
+  h2 {
+    font-weight: 700;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    width: 25%;
+    background-color: $deliveryBackground;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 4px/0 4px;
+  }
+}
+
+.mcWorldPanel {
+  width: calc(33.3% - 2rem);
+
+  img {
+    border-radius: 16px;
+  }
+
+  h2 {
+    font-size: 1.66667vw;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .mcdonaldsWorldSectionHeader {
+    min-width: 100%;
+    h2 {
+      font-size: 4.16667vw;
+      text-align: center;
+    }
+  }
+  .mcWorldPanel {
+    h2 {
+      font-size: 3.125vw;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mcdonaldsWorldSectionContainer {
+    min-width: 100%;
+    .mcdonaldsWorldSectionHeader {
+      h2 {
+        font-size: 8.53333vw;
+        text-align: center;
+      }
+    }
+    .mcWorldPanels {
+      flex-direction: column;
+
+      .mcWorldPanel {
+        min-width: 100%;
+
+        h2 {
+          font-size: 6.4vw;
+        }
+      }
+    }
+  }
+}
