@@ -33,9 +33,7 @@ const Header = () => {
     };
   }, [window.pageYOffset]);
 
-  const showNav = () => {
-    setIsNavExpanded((prevState) => !prevState);
-  };
+  const showNav = () => setIsNavExpanded((prevState) => !prevState);
 
   return (
     <Navbar
