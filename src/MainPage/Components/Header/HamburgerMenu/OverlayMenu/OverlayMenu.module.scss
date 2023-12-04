@@ -1,6 +1,7 @@
 @import "./../../../../../Scss/Abstract/Colors";
 
 .navBarWrapper {
+  margin-left: -16px;
   top: 75px;
   background-color: $pageBackground;
 
@@ -48,7 +49,7 @@
     }
 
     p {
-      font-size: 5.09259vw;
+      font-size: 3vw;
     }
   }
 

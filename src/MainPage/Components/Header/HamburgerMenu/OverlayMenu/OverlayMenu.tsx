@@ -4,7 +4,7 @@ import { ListGroup } from "react-bootstrap";
 
 const OverlayMenu = () => (
   <div
-    className={`position-fixed d-flex justify-content-center align-items-center vw-100 vh-100 z-index-999 ${styles.navBarWrapper}`}
+    className={`position-fixed d-flex justify-content-center align-items-center vw-100 h-100 z-index-999 ${styles.navBarWrapper}`}
   >
     <ListGroup variant="flush" className="w-100">
       <ListGroup.Item
