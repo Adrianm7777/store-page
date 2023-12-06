@@ -18,18 +18,18 @@ const Footer = () => (
       <Col
         className={`d-flex flex-column flex-wrap font-weight-bold ${styles.linksFirstTabel}`}
       >
-        {FooterLinksFirst.map((link) => (
-          <a href={link.href} className="h-25 fw-bold">
-            {link.text}
+        {FooterLinksFirst.map(({ href, text }) => (
+          <a href={href} className="h-25 fw-bold">
+            {text}
           </a>
         ))}
       </Col>
       <Col
         className={`d-flex flex-column flex-wrap ${styles.linksSecondTabel}`}
       >
-        {FooterLinksSecond.map((link) => (
-          <a href={link.href} className={styles.linksSecondList}>
-            {link.text}
+        {FooterLinksSecond.map(({ href, text }) => (
+          <a href={href} className={styles.linksSecondList}>
+            {text}
           </a>
         ))}
       </Col>
