@@ -1,0 +1,129 @@
+@import "./../../../Scss/Abstract/Colors";
+
+.footerContainer {
+  border-top: 2px solid $footerBorderColor;
+}
+
+.linksFirstTabel {
+  column-gap: 1rem;
+}
+
+.linksSecondTabel {
+  column-gap: 1rem;
+}
+
+.linksSecondList {
+  height: 33.33%;
+  font-size: 0.83333vw;
+  column-gap: 1rem;
+}
+
+.footerSocialMediaImage {
+  a {
+    img {
+      width: 150px;
+    }
+  }
+}
+
+.copyrightText {
+  p {
+    font-size: 0.625vw;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .linksFirstTabel {
+    a {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footerContainer {
+    flex-direction: column;
+  }
+
+  .headerFooterContainer {
+    justify-content: flex-start !important;
+    padding: 0;
+    margin: 0;
+    width: 20%;
+  }
+
+  .linksFirstTabel {
+    display: none !important;
+  }
+
+  .linksSecondTabel {
+    flex-direction: row !important;
+    gap: 1.5rem;
+  }
+
+  .linksSecondList {
+    font-size: 1.8vw;
+  }
+
+  .footerSocialMedia {
+    width: 35%;
+    justify-content: flex-start !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  .copyrightText {
+    justify-content: flex-start !important;
+    text-align: start !important;
+
+    p {
+      font-size: 1.4vw;
+    }
+  }
+
+  @media screen and (max-width: 970px) {
+    .footerSocialMediaImage {
+      a {
+        img {
+          width: 120px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footerContainer {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerFooterContainer {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .linksSecondTabel {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .copyrightText {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .linksSecondList {
+    font-size: 1rem;
+  }
+
+  .copyrightText {
+    p {
+      font-size: 1rem;
+    }
+  }
+}
