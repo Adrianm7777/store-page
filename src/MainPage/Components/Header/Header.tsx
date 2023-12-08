@@ -14,6 +14,14 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    if (isNavExpanded) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isNavExpanded]);
+
+  useEffect(() => {
     const handleScroll = () => {
       const offset = window.pageYOffset;
       setIsScrolled(offset > 0);
