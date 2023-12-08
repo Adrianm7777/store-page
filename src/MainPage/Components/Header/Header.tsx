@@ -6,6 +6,7 @@ import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import { useEffect, useState } from "react";
 import { Navbar, Container } from "react-bootstrap";
 import styles from "./Header.module.scss";
+import BackButton from "./BackButton/BackButton";
 
 const Header = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -40,6 +41,7 @@ const Header = () => {
         className="d-flex justify-content-between align-items-center p-3 "
       >
         {isNavExpanded && <OverlayMenu />}
+        <BackButton />
         <HamburgerMenu
           showToggle={showNav}
           hamburgerImg={
@@ -48,11 +50,12 @@ const Header = () => {
               : "https://cdn.mcdonalds.pl/public/build/images/header/friesMenu.bb2596583381aa0584fb120f7dbde079.svg"
           }
         />
+
         {isNavExpanded ? (
           <HeaderSearch />
         ) : (
           <HeaderLogo
-            href="/"
+            href={`/`}
             src="https://cdn.mcdonalds.pl/public/build/images/header/logo3.19d7d61fd29210afe458d0de4d0a7ca6.svg"
           />
         )}
