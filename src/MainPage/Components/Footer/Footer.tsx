@@ -5,7 +5,7 @@ import { FooterLinksFirst, FooterLinksSecond } from "./FooterLinks.consts";
 import styles from "./Footer.module.scss";
 
 const Footer = () => (
-  <Container fluid className="d-flex flex-column m-0 gap-4">
+  <Container fluid className="d-flex flex-column m-0 gap-4 pt-5">
     <Row className={`pt-5 gap-3 ${styles.footerContainer}`}>
       <Col
         className={`d-flex align-items-start justify-content-end ${styles.headerFooterContainer}`}

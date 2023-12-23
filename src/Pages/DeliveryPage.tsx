@@ -1,10 +1,10 @@
 import { Container } from "react-bootstrap";
-import PartnersAppHeader from "../DeliveryPage/Components/PartnersAppHeader/PartnersAppHeader";
+import ContentDeliveryPage from "../DeliveryPage/Components/Content/ContentDeliveryPage";
 
 const DeliveryPage = () => {
   return (
-    <Container>
-      <PartnersAppHeader />
+    <Container fluid className="h-100">
+      <ContentDeliveryPage />
     </Container>
   );
 };
