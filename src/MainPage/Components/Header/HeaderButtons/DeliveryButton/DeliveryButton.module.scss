@@ -1,5 +1,9 @@
 @import "./../../../../../Scss/Abstract/_Colors.scss";
 
+.buttonContainer {
+  display: none;
+}
+
 .deliveryButton {
   display: flex;
   width: 230px;

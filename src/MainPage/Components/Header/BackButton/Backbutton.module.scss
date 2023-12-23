@@ -1,0 +1,44 @@
+@import "./../../../../Scss/Abstract/Colors";
+
+.backButtonContainer {
+  background-color: $pageBackground;
+  width: 15%;
+  height: 2.34375vw;
+  padding: 0 2.86458vw 0 1.04167vw;
+  top: 98px;
+  left: 0;
+  border-radius: 0 0 150px 0;
+
+  a {
+    font-size: 0.83333vw;
+
+    &::before {
+      content: "";
+      background: url(https://cdn.mcdonalds.pl/public/build/images/arrow-left.6218ba17.svg)
+        no-repeat 50%;
+      display: inline-block;
+      height: 0.625vw;
+      width: 0.41667vw;
+      margin-right: 0.625vw;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  a:hover {
+    opacity: 0.5;
+    text-decoration: underline;
+  }
+}
+
+.hideBackButton {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .backButtonContainer {
+    display: none;
+  }
+}

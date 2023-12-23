@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./HeaderLogo.module.scss";
 
 interface HeaderLogoProps {
@@ -8,9 +9,9 @@ interface HeaderLogoProps {
 const HeaderLogo = ({ href, src }: HeaderLogoProps) => {
   return (
     <div className={styles.logo}>
-      <a href={href}>
+      <Link to={href}>
         <img src={src} />
-      </a>
+      </Link>
     </div>
   );
 };

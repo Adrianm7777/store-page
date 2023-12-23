@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import DeliveryButton from "./DeliveryButton/DeliveryButton";
 import styles from "./HeaderButtons.module.scss";
 import SocialMedia from "./SocialMedia/SocialMedia";
+import { useLocation } from "react-router-dom";
 
 interface HeaderButtonsProps {
   isNavOpen: boolean;
@@ -9,6 +10,14 @@ interface HeaderButtonsProps {
 
 const HeaderButtons = ({ isNavOpen }: HeaderButtonsProps) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const [showButton, setShowButton] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setShowButton(location.pathname !== "/");
+  }, [location]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,7 +36,7 @@ const HeaderButtons = ({ isNavOpen }: HeaderButtonsProps) => {
       {!(isNavOpen && windowWidth <= 1200) && (
         <>
           <SocialMedia isHidden={true} />
-          <DeliveryButton />
+          <DeliveryButton showButton={showButton} />
         </>
       )}
     </div>
