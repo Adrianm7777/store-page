@@ -1,4 +1,4 @@
-const PartnersImages = [
+export const PartnersImages = [
   {
     href: "https://glovoapp.com/pl/waw/store/mcdonald-s-waw/",
     imageSource:
@@ -20,5 +20,3 @@ const PartnersImages = [
       "https://cdn.mcdonalds.pl/uploads/20230718143430/wolt-rgb-logo-disc.png",
   },
 ];
-
-export default PartnersImages;

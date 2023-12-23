@@ -1,4 +1,4 @@
-const Slides = [
+export const Slides = [
   {
     text: "15 zł zniżki na Maka w Wolt!",
     backgroundImage:
@@ -26,7 +26,4 @@ const Slides = [
     hrefButton: "https://wolt.com/pl/discovery/mcd-all-23",
     id: 2,
   },
-
 ];
-
-export default Slides;

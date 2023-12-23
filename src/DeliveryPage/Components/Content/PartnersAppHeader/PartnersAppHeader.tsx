@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import PartnersImages from "./PartnersImages.const";
+import { PartnersImages } from "./PartnersImages.const";
 import styles from "./PartnersAppHeader.module.scss";
 
 const PartnersAppHeader = () => (

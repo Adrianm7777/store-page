@@ -1,5 +1,4 @@
-import { Container } from "react-bootstrap";
-import Slides from "./Slides.consts";
+import { Slides } from "./Slides.consts";
 import ShowMoreButton from "./../../../../Reusable/YellowButton/ShowMoreButton";
 import styles from "./CarouselSlide.module.scss";
 import Carousel from "react-bootstrap/Carousel";
