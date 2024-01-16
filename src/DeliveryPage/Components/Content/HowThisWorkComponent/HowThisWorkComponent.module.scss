@@ -1,0 +1,68 @@
+@import "./../../../../Scss/Abstract/Colors";
+
+.howThisWorkContainer {
+  box-shadow: 0 -10px 10px -5px rgba(0, 0, 0, 0.03),
+    0 -15px 19px -5px rgba(0, 0, 0, 0.05);
+}
+.howItWorkHeader {
+  h3 {
+    font-size: 1.47em;
+  }
+  p {
+    font-size: 0.83333vw;
+  }
+}
+
+.deliveryStepsColumn {
+  p {
+    font-weight: 700;
+    margin: 0;
+  }
+}
+.deliveryStepsNumber {
+  font-size: 5vw;
+  .deliveryStepsIndexNumbers {
+    color: $deliveryBackground;
+  }
+  .deliveryStepsIcon {
+    height: 100px;
+    width: 5vw;
+    img {
+      height: 60%;
+      margin-top: 10px;
+    }
+
+    .carouselPartnersImages {
+      margin-left: 20px;
+      transform: rotate(90deg);
+      img {
+        transform: rotate(270deg);
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.deliveryStepsText {
+  height: 100px;
+}
+
+@media screen and (max-width: 1350px) {
+  .howItWorkHeader {
+    h3 {
+      font-size: 1.47em;
+    }
+    p {
+      font-size: 1.5625vw;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .howItWorkHeader {
+    p {
+      font-size: 3.7963vw;
+    }
+  }
+}

@@ -26,8 +26,8 @@ const PartnersAppHeader = () => (
         md="auto"
         className={`d-flex gap-3 ${styles.partnersLinks}`}
       >
-        {PartnersImages.map(({ href, imageSource }) => (
-          <a target="_blank" rel="noopener" href={href}>
+        {PartnersImages.map(({ href, imageSource, key }) => (
+          <a target="_blank" rel="noopener" href={href} key={key}>
             <img src={imageSource} className="w-100 h-100" />
           </a>
         ))}
