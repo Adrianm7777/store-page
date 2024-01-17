@@ -1,5 +1,11 @@
 @import "./../../../../Scss/Abstract/Colors";
 
+.deliveryStepsColumn {
+  p {
+    font-weight: 700;
+    margin: 0;
+  }
+}
 .deliveryStepsNumber {
   font-size: 5vw;
   .deliveryStepsIndexNumbers {
@@ -23,4 +29,7 @@
       }
     }
   }
+}
+.deliveryStepsText {
+  height: 100px;
 }
