@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { cities } from "../Endpoints";
+import { cities } from "../endpoints";
 
 interface GetCitiesDataProps {
   country?: string;

@@ -17,7 +17,7 @@ const Localisation = () => {
   return (
     <Container
       fluid
-      className={`d-flex flex-column align-items-center justify-content-between gap-4 p-5 g-0 ${styles.localistionContainer}`}
+      className={`d-flex flex-column align-items-center justify-content-between gap-4 p-5 g-0 text-center ${styles.localistionContainer}`}
     >
       <h2>Sprawdź, kto z naszych partnerów dowozi w Twoim mieście:</h2>
       <DropdownButton
@@ -35,9 +35,9 @@ const Localisation = () => {
         />
 
         {getCitiesData
-          ?.filter(({ name }) => !value || (name && name.startsWith(value)))
-          .map(({ name }) => (
-            <Dropdown.Item>{name}</Dropdown.Item>
+          ?.filter(({ name }) => !value || name?.startsWith(value))
+          .map(({ name, population }) => (
+            <Dropdown.Item key={population}>{name}</Dropdown.Item>
           ))}
       </DropdownButton>
       <h2>Możesz też podać swoją lokalizację na mapie:</h2>
