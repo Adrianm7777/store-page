@@ -1,0 +1,31 @@
+.howThisWorkContainer {
+  box-shadow: 0 -10px 10px -5px rgba(0, 0, 0, 0.03),
+    0 -15px 19px -5px rgba(0, 0, 0, 0.05);
+}
+.howItWorkHeader {
+  h3 {
+    font-size: 1.47em;
+  }
+  p {
+    font-size: 0.83333vw;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .howItWorkHeader {
+    h3 {
+      font-size: 1.47em;
+    }
+    p {
+      font-size: 1.5625vw;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .howItWorkHeader {
+    p {
+      font-size: 3.7963vw;
+    }
+  }
+}
