@@ -13,7 +13,7 @@ const SocialMedia = ({ isHidden }: SocialMediaProps) => {
   return (
     <div className={classList}>
       {SocialMediaLinks.map((link) => (
-        <a href={link.href} target="_blank" rel="noreferrer">
+        <a href={link.href} target="_blank" rel="noreferrer" key={link.id}>
           <img src={link.imgSrc} />
         </a>
       ))}

@@ -6,23 +6,24 @@ import styles from "./DeliveryStep.module.scss";
 
 const DeliveryStep = () => (
   <>
-    {DeliverySteps.map((step) => (
+    {DeliverySteps.map(({ id, logo, numberImage, text }) => (
       <Col
         sm={6}
         xs={6}
         className={`d-flex flex-column m-0 p-0 align-items-center ${styles.deliveryStepsColumn}`}
+        key={id}
       >
         <div
           className={`d-flex m-0 p-0 align-items-center ${styles.deliveryStepsNumber}`}
         >
           <div className={styles.deliveryStepsIndexNumbers}>
-            <p>{step.numberImage}</p>
+            <p>{numberImage}</p>
           </div>
           <div
             className={`d-flex align-items-center ${styles.deliveryStepsIcon}`}
           >
-            {step.id > 1 ? (
-              <i className={step.logo}></i>
+            {id > 1 ? (
+              <i className={logo}></i>
             ) : (
               <Carousel
                 indicators={false}
@@ -30,7 +31,7 @@ const DeliveryStep = () => (
                 className={`d-flex ${styles.carouselPartnersImages}`}
               >
                 {PartnersImages.map((image) => (
-                  <Carousel.Item>
+                  <Carousel.Item key={image.key}>
                     <img src={image.imageSource} />
                   </Carousel.Item>
                 ))}
@@ -41,8 +42,8 @@ const DeliveryStep = () => (
         <div
           className={`d-flex flex-column align-items-center text-center ${styles.deliveryStepsText}`}
         >
-          <p>{step.text}</p>
-          {step.id === 2 && (
+          <p>{text}</p>
+          {id === 2 && (
             <ShowMoreButton
               btnHref=""
               btnText="Lista miejscowości"
