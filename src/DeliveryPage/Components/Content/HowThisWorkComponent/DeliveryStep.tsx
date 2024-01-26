@@ -30,9 +30,9 @@ const DeliveryStep = () => (
                 controls={false}
                 className={`d-flex ${styles.carouselPartnersImages}`}
               >
-                {PartnersImages.map((image) => (
-                  <Carousel.Item key={image.key}>
-                    <img src={image.imageSource} />
+                {PartnersImages.map(({ imageSource, key }) => (
+                  <Carousel.Item key={key}>
+                    <img src={imageSource} />
                   </Carousel.Item>
                 ))}
               </Carousel>

@@ -29,12 +29,7 @@ const Faq = () => (
               <div>
                 {link?.split("\n").map((line, index) => (
                   <ul key={line}>
-                    <a
-                      href={href[index]}
-                      key={index}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
+                    <a href={href[index]} target="_blank" rel="noreferrer">
                       {line}
                     </a>
                   </ul>
