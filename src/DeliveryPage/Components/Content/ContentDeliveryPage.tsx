@@ -4,6 +4,7 @@ import styles from "./ContentDeliveryPage.module.scss";
 import CarouselSlides from "./CarouselSlide/CarouselSlide";
 import HowThisWorkComponent from "./HowThisWorkComponent/HowThisWorkComponent";
 import Localisation from "./LocalisationComponent/Localisation";
+import Faq from "./FaqComponent/Faq";
 
 const ContentDeliveryPage = () => (
   <Container
@@ -14,6 +15,7 @@ const ContentDeliveryPage = () => (
     <CarouselSlides />
     <HowThisWorkComponent />
     <Localisation />
+    <Faq />
   </Container>
 );
 
