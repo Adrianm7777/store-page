@@ -1,0 +1,95 @@
+@import "./../../../Scss/Abstract/Colors";
+
+.footerContainer {
+  background: url(https://cdn.mcdonalds.pl/public/build/images/bg.17c01ad6.jpg)
+    repeat 0 0;
+  height: 200px;
+
+  .mcDeliveryFooterLinks {
+    a {
+      font-size: 0.9375vw;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .mcdonaldCorporationFooter {
+    background-color: $deliveryBackground;
+    p {
+      font-size: 0.72917vw;
+    }
+    a {
+      font-size: 0.72917vw;
+    }
+    .onTopButton {
+      cursor: pointer;
+      width: 2.39583vw;
+      height: 2.39583vw;
+      background-color: $pageBackground;
+    }
+  }
+
+  .mcdonaldsEndFooter {
+    background-color: $deliveryBackground;
+    p {
+      font-size: 0.625vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footerContainer {
+    height: 100%;
+    .mcDeliveryFooterLinks {
+      flex-direction: column;
+      padding: 1rem;
+      a {
+        font-size: 1.66016vw;
+      }
+    }
+    .mcdonaldCorporationFooter {
+      p {
+        font-size: 1.5625vw;
+      }
+      .informationLinks {
+        display: none !important;
+      }
+      .onTopButton {
+        width: 3.90625vw;
+        height: 3.90625vw;
+      }
+    }
+    .mcdonaldsEndFooter {
+      p {
+        font-size: 1.17188vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mcDeliveryFooterLinks {
+    a {
+      font-size: 3.7037vw !important;
+    }
+  }
+  .mcdonaldCorporationFooter {
+    p {
+      font-size: 3.42593vw !important;
+    }
+  }
+  .mcdonaldsEndFooter {
+    p {
+      font-size: 2.59259vw !important;
+    }
+  }
+  .onTopButton {
+    width: 10vw !important;
+    height: 10vw !important;
+    img {
+      width: 3.24074vw !important;
+    }
+  }
+}
