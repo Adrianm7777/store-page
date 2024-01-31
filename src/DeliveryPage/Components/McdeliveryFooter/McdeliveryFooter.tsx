@@ -44,7 +44,7 @@ const McdeliveryFooter = () => {
           <a href="franczyza">Franczyza</a>
           <a href="centrum-pomocy">Centrum Pomocy</a>
         </Col>
-        <div
+        <button
           className={`d-flex justify-content-center align-items-center ${styles.onTopButton}`}
           onClick={scrollOnTop}
         >
@@ -52,7 +52,7 @@ const McdeliveryFooter = () => {
             src="https://cdn.mcdonalds.pl/public/build/images/icon/arrowTop.2584f6dca53569e56980a4a82a7c58b4.svg"
             className="w-100"
           />
-        </div>
+        </button>
       </Row>
       <Row className={`d-flex text-center ${styles.mcdonaldsEndFooter}`}>
         <p>
