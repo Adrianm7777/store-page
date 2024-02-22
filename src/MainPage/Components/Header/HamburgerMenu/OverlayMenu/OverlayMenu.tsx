@@ -9,14 +9,14 @@ const OverlayMenu = () => (
     <ListGroup variant="flush" className="w-100">
       <ListGroup.Item
         action
-        href="#home"
+        href="/"
         className={`d-flex justify-content-center align-items-center ${styles.navBarItem}`}
       >
         <p>Strona główna</p>
       </ListGroup.Item>
       <ListGroup.Item
         action
-        href="#menu"
+        href="/nasze-menu"
         className={`d-flex justify-content-center align-items-center ${styles.navBarItem}`}
       >
         <p>Nasze menu</p>
