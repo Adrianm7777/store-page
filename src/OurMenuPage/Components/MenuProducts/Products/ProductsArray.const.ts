@@ -1,4 +1,4 @@
-export const WhatsNewArray = [
+export const WhatsNewArray: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -37,7 +37,7 @@ export const WhatsNewArray = [
   },
 ];
 
-export const McSetArray = [
+export const McSetArray: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -46,7 +46,7 @@ export const McSetArray = [
   },
 ];
 
-export const Burgers = [
+export const Burgers: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -83,7 +83,7 @@ export const Burgers = [
   },
 ];
 
-export const McWrap = [
+export const McWrap: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -110,7 +110,7 @@ export const McWrap = [
   },
 ];
 
-export const Chicken = [
+export const Chicken: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -136,7 +136,7 @@ export const Chicken = [
   },
 ];
 
-export const TwoForYou = [
+export const TwoForYou: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -145,7 +145,7 @@ export const TwoForYou = [
   },
 ];
 
-export const FriesAndSides = [
+export const FriesAndSides: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -172,7 +172,7 @@ export const FriesAndSides = [
   },
 ];
 
-export const McCafe = [
+export const McCafe: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -199,7 +199,7 @@ export const McCafe = [
   },
 ];
 
-export const SweetsAndTreats = [
+export const SweetsAndTreats: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -226,7 +226,7 @@ export const SweetsAndTreats = [
   },
 ];
 
-export const Beverages = [
+export const Beverages: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -254,7 +254,7 @@ export const Beverages = [
   },
 ];
 
-export const HappyMeal = [
+export const HappyMeal: ProductType[] = [
   {
     id: 1,
     imageLink:
@@ -269,7 +269,7 @@ export const HappyMeal = [
   },
 ];
 
-export const Breakfast = [
+export const Breakfast: ProductType[] = [
   {
     id: 1,
     imageLink:

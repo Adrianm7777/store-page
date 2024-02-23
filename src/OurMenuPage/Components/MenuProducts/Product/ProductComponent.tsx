@@ -1,9 +1,9 @@
-import Product, { ProductProps } from "./Product";
+import Product from "./Product";
 import { Row } from "react-bootstrap";
 
 interface ProductCompontentProps {
   title: string;
-  product: ProductProps[];
+  product: ProductType[];
   id: string;
 }
 const ProductComponent = ({ title, product, id }: ProductCompontentProps) => (

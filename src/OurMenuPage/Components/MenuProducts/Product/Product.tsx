@@ -1,6 +1,12 @@
 import { Col } from "react-bootstrap";
 import styles from "./Product.module.scss";
 
+interface ProductProps {
+  title: string;
+  imageLink: string;
+  id: number;
+}
+
 const Product = ({ title, imageLink, id }: ProductProps) => (
   <Col
     key={id}
