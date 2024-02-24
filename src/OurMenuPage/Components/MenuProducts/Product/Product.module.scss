@@ -1,0 +1,17 @@
+@import "./../../../../Scss/Abstract/Colors";
+
+.productColumn {
+  object-fit: cover;
+  flex: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $deliveryBackground;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productColumn {
+    width: 50% !important;
+  }
+}
