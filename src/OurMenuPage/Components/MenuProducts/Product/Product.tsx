@@ -1,7 +1,7 @@
 import { Col } from "react-bootstrap";
 import styles from "./Product.module.scss";
 import { useState } from "react";
-import ProductModule from "./ProductModule/ProductModule";
+import ProductModal from "./ProductModal/ProductModal";
 
 interface ProductProps {
   title: string;
@@ -13,11 +13,11 @@ interface ProductProps {
 const Product = ({ title, imageLink, id, price }: ProductProps) => {
   const [show, setShow] = useState(false);
   const [numberOfProducts, setNumberOfProducts] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(price);
+
+  const totalPrice = numberOfProducts * price;
 
   const handleClose = () => {
     setShow((prevState) => !prevState);
-    setTotalPrice(price);
     setNumberOfProducts(1);
   };
   const handleShow = () => setShow(true);
@@ -36,19 +36,15 @@ const Product = ({ title, imageLink, id, price }: ProductProps) => {
         <p>{title}</p>
         <p>{`${price} zł`}</p>
       </Col>
-      {show ? (
-        <ProductModule
+      {show && (
+        <ProductModal
           handleClose={handleClose}
           show={show}
           title={title}
-          price={price}
           numberOfProducts={numberOfProducts}
           totalPrice={totalPrice}
           setNumberOfProducts={setNumberOfProducts}
-          setTotalPrice={setTotalPrice}
         />
-      ) : (
-        ""
       )}
     </>
   );

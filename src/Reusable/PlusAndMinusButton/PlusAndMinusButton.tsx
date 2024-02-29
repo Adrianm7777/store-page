@@ -1,29 +1,20 @@
-import { useState } from "react";
 import styles from "./PlusAndMinusButton.module.scss";
 
 interface PlusAndMinusButtonProps {
-  price: number;
   numberOfProducts: number;
-  totalPrice: number;
   setNumberOfProducts: React.Dispatch<React.SetStateAction<number>>;
-  setTotalPrice: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const PlusAndMinusButton = ({
-  price,
   numberOfProducts,
   setNumberOfProducts,
-  setTotalPrice,
-  totalPrice,
 }: PlusAndMinusButtonProps) => {
   const addProduct = () => {
     setNumberOfProducts((prevState) => prevState + 1);
-    setTotalPrice(totalPrice + price);
   };
   const removeProduct = () => {
-    if (numberOfProducts > 0) {
+    if (numberOfProducts > 1) {
       setNumberOfProducts((prevState) => prevState - 1);
-      setTotalPrice(totalPrice - price);
     }
   };
   return (
