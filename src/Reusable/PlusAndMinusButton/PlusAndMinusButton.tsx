@@ -17,6 +17,7 @@ const PlusAndMinusButton = ({
       setNumberOfProducts((prevState) => prevState - 1);
     }
   };
+
   return (
     <div
       className={`d-flex justify-content-between align-items-center w-25 ${styles.buttonsContainer}`}
