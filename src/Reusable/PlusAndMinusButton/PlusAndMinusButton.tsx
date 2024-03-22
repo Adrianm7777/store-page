@@ -9,10 +9,11 @@ const PlusAndMinusButton = ({
   numberOfProducts,
   setNumberOfProducts,
 }: PlusAndMinusButtonProps) => {
-  const addProduct = () => {
+  const increaseNumberOfProduct = () => {
     setNumberOfProducts((prevState) => prevState + 1);
   };
-  const removeProduct = () => {
+
+  const decreaseNumberOfProduct = () => {
     if (numberOfProducts > 1) {
       setNumberOfProducts((prevState) => prevState - 1);
     }
@@ -22,12 +23,12 @@ const PlusAndMinusButton = ({
     <div
       className={`d-flex justify-content-between align-items-center w-25 ${styles.buttonsContainer}`}
     >
-      <button onClick={removeProduct}>
+      <button onClick={decreaseNumberOfProduct}>
         <i className="bi bi-dash-circle"></i>
       </button>
 
       {numberOfProducts}
-      <button onClick={addProduct}>
+      <button onClick={increaseNumberOfProduct}>
         <i className="bi bi-plus-circle"></i>
       </button>
     </div>

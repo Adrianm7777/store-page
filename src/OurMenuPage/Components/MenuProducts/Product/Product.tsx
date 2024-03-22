@@ -4,15 +4,14 @@ import { useState } from "react";
 import ProductModal from "./ProductModal/ProductModal";
 
 interface ProductProps {
-  title: string;
-  imageLink: string;
-  id: number;
-  price: number;
+  product: ProductType;
 }
 
-const Product = ({ title, imageLink, id, price }: ProductProps) => {
+const Product = ({ product }: ProductProps) => {
   const [show, setShow] = useState(false);
   const [numberOfProducts, setNumberOfProducts] = useState(1);
+
+  const { id, imageLink, price, title } = product;
 
   const totalPrice = numberOfProducts * price;
 
@@ -40,10 +39,10 @@ const Product = ({ title, imageLink, id, price }: ProductProps) => {
         <ProductModal
           handleClose={handleClose}
           show={show}
-          title={title}
           numberOfProducts={numberOfProducts}
           totalPrice={totalPrice}
           setNumberOfProducts={setNumberOfProducts}
+          product={product}
         />
       )}
     </>

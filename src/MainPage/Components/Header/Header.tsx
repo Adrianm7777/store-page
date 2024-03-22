@@ -4,14 +4,18 @@ import OverlayMenu from "./HamburgerMenu/OverlayMenu/OverlayMenu";
 import HeaderButtons from "./HeaderButtons/HeaderButtons";
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Navbar, Container } from "react-bootstrap";
 import styles from "./Header.module.scss";
 import BackButton from "./BackButton/BackButton";
+import CartShopping from "../../../OurMenuPage/Components/CartShopping/CartShopping";
 
 const Header = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const location = useLocation();
 
   useEffect(() => {
     if (isNavExpanded) {
@@ -23,7 +27,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.pageYOffset;
+      const offset = window.scrollY;
       setIsScrolled(offset > 0);
     };
 
@@ -32,7 +36,8 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [window.pageYOffset]);
+    //eslint-disable-next-line
+  }, [window.scrollY]);
 
   const showNav = () => setIsNavExpanded((prevState) => !prevState);
 
@@ -68,6 +73,7 @@ const Header = () => {
           />
         )}
         <HeaderButtons isNavOpen={isNavExpanded} />
+        {location?.pathname === "/nasze-menu" && <CartShopping />}
       </Container>
     </Navbar>
   );
