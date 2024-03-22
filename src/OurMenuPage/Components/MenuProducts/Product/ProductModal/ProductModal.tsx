@@ -38,7 +38,7 @@ const ProductModal = ({
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{product.title}</Modal.Title>
+          <Modal.Title>{product?.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>{`${totalPrice.toFixed(2)} zł`}</Modal.Body>
         <Modal.Footer className="d-flex justify-content-between">

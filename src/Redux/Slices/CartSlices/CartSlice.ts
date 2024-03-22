@@ -12,7 +12,7 @@ const cartSlice = createSlice({
   reducers: {
     addProduct: (state, action: PayloadAction<AddCartPayloadType>) => {
       const findProduct = state.products.find(
-        (product) => product.id === action.payload.product.id
+        (product) => product?.id === action.payload.product.id
       );
       if (findProduct) {
         findProduct.quantity! += action.payload.quantityOfAllProducts;
@@ -24,7 +24,7 @@ const cartSlice = createSlice({
         const newProduct = {
           ...action.payload.product,
           totalPrice: action.payload.totalPrice,
-          totalQuantity: action.payload.quantityOfAllProducts,
+          quantity: action.payload.quantityOfAllProducts,
         };
 
         state.products.push(newProduct);
@@ -37,7 +37,7 @@ const cartSlice = createSlice({
 
     removeProduct: (state, action: PayloadAction<number>) => {
       const find = state.products.find(
-        (product) => product.id === action.payload
+        (product) => product?.id === action.payload
       );
       if (find) {
         state.quantityOfAllProducts -= find.quantity!;
@@ -45,7 +45,7 @@ const cartSlice = createSlice({
       }
 
       state.products = state.products.filter(
-        (product) => product.id !== action.payload
+        (product) => product?.id !== action.payload
       );
     },
   },

@@ -10,17 +10,18 @@ import styles from "./CartShopping.module.scss";
 const CartShopping = () => {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-
-  const handleShow = () => setShow(true);
-
   const cart = useSelector((state: RootState) => state.cart);
 
   const dispatch = useDispatch();
 
+  const handleClose = () => setShow(false);
+
+  const handleShow = () => setShow(true);
+
   const handleRemoveItem = (id: number) => {
     dispatch(removeProduct(id));
   };
+
   return (
     <>
       <Button
@@ -46,11 +47,13 @@ const CartShopping = () => {
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {cart.products.map((product) => (
-            <div key={product.id}>
-              <Button onClick={() => handleRemoveItem(product.id)}>Usuń</Button>
-              <h1>{product.title}</h1>
-              <img src={product.imageLink} alt="produkt" />
+          {cart?.products.map((product) => (
+            <div key={product?.id}>
+              <Button onClick={() => handleRemoveItem(product?.id)}>
+                Usuń
+              </Button>
+              <h1>{product?.title}</h1>
+              <img src={product?.imageLink} alt="produkt" />
             </div>
           ))}
         </Offcanvas.Body>
