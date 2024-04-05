@@ -9,7 +9,7 @@ interface ProductCompontentProps {
 const ProductComponent = ({ title, products, id }: ProductCompontentProps) => (
   <Row className="d-flex w-100 flex-wrap" id={id}>
     <h2>{title}</h2>
-    {products.map((product) => (
+    {products?.map((product) => (
       <Product key={product?.id} product={product} />
     ))}
   </Row>

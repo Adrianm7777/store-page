@@ -3,3 +3,30 @@
   background-color: $pageBackground;
   width: 25px;
 }
+
+.productContainer {
+  &:hover {
+    background-color: $cartProductBackground;
+  }
+}
+.quantityContainer {
+  border: 1px solid $textColor;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.deleteButton {
+  all: unset;
+}
+
+@media screen and (max-width: 1200px) {
+  .buttonCart {
+    width: 55px !important;
+    position: absolute;
+    right: 0px;
+    p {
+      display: none;
+    }
+  }
+}
