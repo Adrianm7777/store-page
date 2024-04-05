@@ -7,7 +7,7 @@ const MenuProducts = () => (
   <Container fluid className="d-flex flex-column h-100 bg-white mt-3">
     <ButtonsArray />
     {ProductCategories.map(({ title, product, id }) => (
-      <ProductComponent key={title} title={title} product={product} id={id} />
+      <ProductComponent key={id} title={title} products={product} id={id} />
     ))}
   </Container>
 );
