@@ -35,23 +35,29 @@ const CartShopping = () => {
         >
           {cart.quantityOfAllProducts}
         </div>
-
         <p className="m-0 p-0">Zobacz zamówienie</p>
-        <p className="m-0 p-0">{`${cart.allProductsPrice.toFixed(2)} zł`}</p>
+        <p className="m-0 p-0">{`${
+          cart.allProductsPrice.toFixed(2) === "-0.00"
+            ? "0.00"
+            : cart.allProductsPrice.toFixed(2)
+        } zł`}</p>
       </Button>
       <Offcanvas show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
             <p>Twoje zamówienie</p>
-            Kwota: {cart.allProductsPrice.toFixed(2)}zł Ilość:{" "}
-            {cart.quantityOfAllProducts}
+            Kwota:{" "}
+            {cart.allProductsPrice.toFixed(2) === "-0.00"
+              ? "0.00"
+              : cart.allProductsPrice.toFixed(2)}{" "}
+            zł Ilość: {cart.quantityOfAllProducts}
           </Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body className="p-0">
+        <Offcanvas.Body className="p-0 position-relative mb-5">
           {cart?.products?.map((product) => (
             <Row
               key={product?.id}
-              className={`d-flex w-100 p-0 m-0  ${styles.productContainer}`}
+              className={`d-flex w-100 p-0 m-0 ${styles.productContainer}`}
             >
               <Col className="d-flex flex-column w-75 m-2 gap-2">
                 <h1 className="fs-5">{product?.title}</h1>
@@ -76,6 +82,11 @@ const CartShopping = () => {
             </Row>
           ))}
         </Offcanvas.Body>
+        <Button
+          className={`w-75 mb-2 position-absolute bottom-0 start-50  ${styles.summaryButton}`}
+        >
+          Idź do podsumowania
+        </Button>
       </Offcanvas>
     </>
   );
