@@ -20,6 +20,10 @@
   all: unset;
 }
 
+.summaryButton {
+  transform: translateX(-50%);
+}
+
 @media screen and (max-width: 1200px) {
   .buttonCart {
     width: 55px !important;
